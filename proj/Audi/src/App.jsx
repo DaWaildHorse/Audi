@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import { Login, Pki } from './login';
+import Landing from './Landing'; // Import the Landing component
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentComponent, setCurrentComponent] = useState('pki'); // Track current component
+
+  const handleShowLogin = () => {
+    setCurrentComponent('login'); // Show the Login component
+  };
+
+  const handleSuccessfulLogin = () => {
+    setCurrentComponent('landing'); // Navigate to Landing on successful login
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      {currentComponent === 'landing' && <Landing />} {/* Render Landing component */}
+      {currentComponent === 'login' && (
+        <Login onSuccessfulLogin={handleSuccessfulLogin} /> // Pass the function to Login
+      )}
+      {currentComponent === 'pki' && (
+        <Pki handleShowLogin={handleShowLogin} /> // Pass the function to Pki
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
