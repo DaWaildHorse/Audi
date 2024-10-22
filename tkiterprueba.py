@@ -1,25 +1,36 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
+from tkinter import messagebox
 
 import matplotlib
 matplotlib.use('TkAgg')
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 
+# Función para importar archivos
+def importar_archivo():
+    filename = filedialog.askopenfilename()
+    if filename:
+        messagebox.showinfo("Importar Archivo", f"Archivo importado: {filename}")
+
+# Función para buscar y mostrar resumen de ID
+def buscar_id():
+    id_buscado = entry_buscar.get()
+    if id_buscado:
+        # Aquí iría la lógica para buscar y mostrar el resumen del ID
+        messagebox.showinfo("Resumen de ID", f"Resumen del ID {id_buscado}.")
+    else:
+        messagebox.showwarning("Buscar ID", "Por favor, ingrese un ID válido.")
+
 # Crear ventana principal
 root = tk.Tk()
 root.title("Aplicación de Predicción de Ausentismo")
 root.geometry("900x700")
-root.configure(bg='#ffffff')  # Fondo blanco
+root.configure(bg='#ffffff')
 
 # Estilo de ttk
 style = ttk.Style()
-style.theme_use('clam')
-style.configure('TFrame', background='#ffffff')
-style.configure('TLabel', background='#ffffff', font=('Arial', 12))
-style.configure('TButton', font=('Arial', 12))
-style.configure('TCombobox', font=('Arial', 12))
 
 # Crear barra de navegación
 frame_nav = ttk.Frame(root, height=50)
@@ -38,15 +49,7 @@ frame_main.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
 
 # Frame para los dropdowns
 frame_dropdowns = ttk.Frame(frame_main)
-frame_dropdowns.pack(pady=10)
-
-# Colores relacionados con Audi (rojo, negro, gris)
-root.configure(bg='#ffffff')  # Fondo blanco
-
-style.configure('TFrame', background='#e5e5e5')  # Gris claro para los frames
-style.configure('TLabel', background='#e5e5e5', font=('Arial', 12), foreground='#000000')  # Texto negro
-style.configure('TButton', font=('Arial', 12), background='#ff0000', foreground='#ffffff')  # Botones rojos con texto blanco
-style.configure('TCombobox', font=('Arial', 12))
+frame_dropdowns.pack(pady=10, anchor='w')  # Alineado a la izquierda con anchor='w'
 
 # Dropdown para Código de Puesto
 label_puesto = ttk.Label(frame_dropdowns, text="Código de Puesto:")
@@ -75,6 +78,26 @@ combo_tiempo = ttk.Combobox(frame_dropdowns, values=opciones_tiempo, state="read
 combo_tiempo.current(0)
 combo_tiempo.pack(side=tk.LEFT, padx=5)
 
+# Sección para búsqueda de ID
+frame_buscar = ttk.Frame(frame_main)
+frame_buscar.pack(pady=10, anchor='w')
+
+label_buscar = ttk.Label(frame_buscar, text="Buscar ID:")
+label_buscar.pack(side=tk.LEFT, padx=5)
+
+entry_buscar = ttk.Entry(frame_buscar)
+entry_buscar.pack(side=tk.LEFT, padx=5)
+
+btn_buscar = ttk.Button(frame_buscar, text="Ver Resumen", command=buscar_id)
+btn_buscar.pack(side=tk.LEFT, padx=5)
+
+# Botón de importar archivos
+frame_importar = ttk.Frame(frame_main)
+frame_importar.pack(pady=10, anchor='w')
+
+btn_importar = ttk.Button(frame_importar, text="Importar Datos", command=importar_archivo)
+btn_importar.pack(side=tk.LEFT, padx=5)
+
 # Sección de gráficas de resultados
 label_graficas = ttk.Label(frame_main, text="Gráficas de Resultados:")
 label_graficas.pack(pady=10)
@@ -95,7 +118,6 @@ def ver_mas():
     top = tk.Toplevel(root)
     top.title("Tablas Resumen")
     top.geometry("500x400")
-    top.configure(bg='#e5e5e5')
     label_tabla = ttk.Label(top, text="Aquí se mostrarán las tablas que resumen las gráficas.")
     label_tabla.pack(pady=20)
 
