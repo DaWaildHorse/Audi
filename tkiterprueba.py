@@ -104,8 +104,8 @@ label_graficas.pack(pady=10)
 
 # Crear figura de Matplotlib (placeholder para las gráficas)
 fig = Figure(figsize=(6, 4), dpi=100)
-t = [0, 1, 2, 3, 4, 5]
-s = [0, 1, 4, 9, 16, 25]
+t = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+s = [0, 1, 4, 9, 16, 25, 76, 32, 53, 64, 68, 34]
 ax = fig.add_subplot(111)
 ax.plot(t, s)
 
