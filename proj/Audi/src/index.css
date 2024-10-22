@@ -10,6 +10,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 }
 
 a {
@@ -145,12 +146,12 @@ nav ul li a:hover {
 
 /* Section Margins */
 .import-section {
-  margin-top: 20px;
+  margin-top: 0px;
   text-align: left;
 }
 
 .results {
-  margin-top: 20px;
+  margin-top: 0px;
   text-align: left;
 }
 
@@ -162,7 +163,7 @@ nav ul li a:hover {
 
 /* Summary Section */
 .summary {
-  margin-top: 20px;
+  margin-top: 0px;
   text-align: left;
 }
 
