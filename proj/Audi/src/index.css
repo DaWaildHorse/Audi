@@ -66,3 +66,108 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+/* Barra de navegación */
+nav {
+  text-align: left;
+  padding: 1em;
+  background-color: #eee;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1a1a1a; /* Respetando el color definido en :root */
+}
+
+nav ul li a:hover {
+  color: #535bf2; /* Respetando el hover de los links en tu root */
+}
+
+/* Alineación del contenedor principal */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 1em;
+}
+
+/* Alineación y organización de la sección del formulario */
+.form-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-section label {
+  flex: 1;
+}
+
+.form-section select {
+  width: 100%;
+}
+
+/* Botones */
+.form-section button, .import-section button, .summary button {
+  padding: 0.6em 1.2em;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.form-section button:hover, .import-section button:hover, .summary button:hover {
+  border-color: #646cff;
+}
+
+/* Sección de importar archivos */
+.import-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Sección de resultados */
+.results {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.results h2 {
+  font-size: 1.5em;
+  line-height: 1.1;
+}
+
+/* Sección de resumen */
+.summary {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Compatibilidad con modo claro */
+@media (prefers-color-scheme: light) {
+  nav {
+    background-color: #ffffff;
+  }
+
+  nav ul li a {
+    color: #213547; /* Color de los links en modo claro */
+  }
+
+  .form-section button, .import-section button, .summary button {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+}
