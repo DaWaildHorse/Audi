@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-import subprocess
+import tkiterprueba  # Importar el otro archivo como módulo
 
 # Function to go to the login window
 def goto_login():
@@ -10,7 +10,7 @@ def goto_login():
 # Function to go to the main page
 def goto_mainpage(login_window):
     login_window.destroy()  # Close the login window
-    subprocess.run(['python3', 'tkiterprueba.py'])  # Run the external script
+    tkiterprueba.main() # Llama la función para iniciar la ventana
     root.quit()  # Close the application
 
 # Function to create the login window
