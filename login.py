@@ -15,7 +15,7 @@ def goto_mainpage(login_window):
 
 # Function to create the login window
 def login():
-    login_window = Tk()
+    login_window = Tk("PPA")
     frm2 = ttk.Frame(login_window, padding=10)
     frm2.grid()
 
