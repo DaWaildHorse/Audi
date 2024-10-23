@@ -7,9 +7,19 @@
   src: url("src/assets/Audi Type Digital/AudiType v4.03 Web Fonts (TrueType)/AudiType-Bold_4.03.woff") format('woff');
 }
 
+@font-face {
+  font-family: "Audifont";
+  src: url("src/assets/Audi Type Digital/AudiType v4.03 Web Fonts (TrueType)/AudiType-WideNormal_4.03.woff") format('woff');
+}
+
 
 .PAPA{
   font-family: 'AudiTtile';
+  font-weight: 800;
+}
+
+.btn{
+  font-family: "Audifont";
 }
 
 :root {
@@ -18,22 +28,24 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  
-  background-color:#fdfdff;
+
+  background-color: #fdfdff;
+   ;
   background-image: url("src/assets/LogoBW.png");
   background-repeat: no-repeat;  /* Prevent the image from repeating */
-  background-position: center;   /* Center the image */
-  background-size: cover;    
-  background-position-y: -150%;
-
-
+  background-position: center;    /* Center the image */
+  background-size: cover;         /* Cover the entire viewport */
+  background-attachment: fixed;   /* Keep the background fixed on scroll */
+  background-position-y: 40vh;    /* Adjust the vertical position */
+  
   margin: 0;
-  overflow: hidden;
+  text-wrap:wrap;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -48,8 +60,8 @@ body {
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center elements horizontally */
   justify-content: center; /* Center elements vertically */
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   padding: 0; /* Ensure no padding is causing issues */
 }
 h1 {
@@ -186,4 +198,41 @@ nav ul li a:hover {
 }
 .bgaudi {
   /* Add any specific styles for .bgaudi if needed */
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  z-index: -1; /* Keep the video behind the content */
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-y: hidden;
+  height: 100%;
+  pointer-events: none; /* Ensure the video is not interactable */
+  object-fit: cover; /* Ensures the video covers the background */
+  transform:  scale(1.5); /* Center and zoom in */
+}
+.black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-y: hidden;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to your liking */
+  z-index: 0; /* Keep the overlay above the video */
+}
+
+.relative {
+  z-index: 1; /* Keep the content above the video */
 }
