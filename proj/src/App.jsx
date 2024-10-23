@@ -24,7 +24,7 @@ function App() {
         <Login onSuccessfulLogin={handleSuccessfulLogin} /> // Pass the function to Login
       )}
       {currentComponent === 'pki' && (
-        <Pki handleShowLogin={handleShowLogin} /> // Pass the function to Pki
+        <Pki handleShowLogin={handleShowLogin} />// Pass the function to Pki
       )}
     </div>
   );

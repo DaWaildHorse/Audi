@@ -50,11 +50,12 @@ function Pki({ handleShowLogin }) {
   return (
     <>
     <div>
-        <h1>Predictor Ausentismo Perfecto Audi (PAPA)</h1>
-      <div className='card'>
+        <h1 className='text-slate-950 PAPA'>Predictor Ausentismo Perfecto Audi (PAPA)</h1>
+      <div className='block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'>
         <h2>Valida tus credenciales de PKI</h2>
         <button onClick={handleShowLogin}>Validar PKI</button>
       </div>
+
       </div>
     </>
   );
