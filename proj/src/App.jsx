@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import './App.css';
 import { Login, Pki } from './login';
+import './App.css';
+import './index.css';
 
 import Landing from './landing'; // Import the Landing component
  

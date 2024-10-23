@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  margin: 0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+body {
+  margin: 0; /* Remove margin */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  justify-content: center; /* Center elements vertically */
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 0; /* Ensure no padding is causing issues */
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0; /* Reset margin */
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+/* Navigation Bar */
+nav {
+  text-align: left;
+  padding: 1em;
+  background-color: #eee;
+  position: fixed;
+  top: 0;
+  left: 0; /* Ensure it starts from the left */
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top */
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #1a1a1a; /* Respects the color defined in :root */
+}
+nav ul li a:hover {
+  color: #535bf2; /* Respects the hover of the links in your root */
+}
+/* Main Container Alignment */
+.container {
+  width: 100%; /* Ensure it uses the full width */
+  max-width: 1200px; /* Limit the maximum width */
+  margin: 0 auto; /* Center the container */
+  padding: 1em; /* Adjust padding as needed */
+}
+/* Form Section Alignment */
+.form-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.form-section label {
+  flex: 1;
+}
+.form-section select {
+  width: 100%;
+}
+/* Buttons */
+.form-section button,
+.import-section button,
+.summary button {
+  padding: 0.6em 1.2em;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.form-section button:hover,
+.import-section button:hover,
+.summary button:hover {
+  border-color: #646cff;
+}
+/* Section Margins */
+.import-section {
+  margin-top: 0px;
+  text-align: left;
+}
+.results {
+  margin-top: 0px;
+  text-align: left;
+}
+.results h2 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  margin: 0; /* Reset margin */
+}
+/* Summary Section */
+.summary {
+  margin-top: 0px;
+  text-align: left;
+}
+/* Light Mode Compatibility */
+@media (prefers-color-scheme: light) {
+  nav {
+    background-color: #ffffff;
+  }
+  nav ul li a {
+    color: #213547; /* Color of the links in light mode */
+  }
+  .form-section button,
+  .import-section button,
+  .summary button {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+}
+.bgaudi {
+  /* Add any specific styles for .bgaudi if needed */
+}
