@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import './App.css';
+import './index.css';
 
 function Login({ onSuccessfulLogin }) {
   const [username, setUsername] = useState('');
@@ -18,7 +20,7 @@ function Login({ onSuccessfulLogin }) {
   return (
     <>
       <div>
-        <h2>Login</h2>
+        <h2 className='text-green-900'>Login</h2>
         <input
           type="text"
           placeholder="Username"
@@ -45,13 +47,14 @@ Login.propTypes = {
 
 
 function Pki({ handleShowLogin }) {
-
-
   return (
     <>
-      <div>
+    <div>
+        <h1>Predictor Ausentismo Perfecto Audi (PAPA)</h1>
+      <div className='card'>
         <h2>Valida tus credenciales de PKI</h2>
         <button onClick={handleShowLogin}>Validar PKI</button>
+      </div>
       </div>
     </>
   );

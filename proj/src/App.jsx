@@ -17,7 +17,7 @@ function App() {
  
 
   return (
-    <div className='bgaudi'>
+    <div>
       {currentComponent === 'landing' && <Landing />} {/* Render Landing component */}
       {currentComponent === 'login' && (
         <Login onSuccessfulLogin={handleSuccessfulLogin} /> // Pass the function to Login
