@@ -4,6 +4,10 @@ import './index.css';
 import './landing.css';
 import LogoBW from './assets/LogoBW.png';
 
+import PythonRunner from './PythonRunner';
+
+
+
 function Landing() {
   const [puesto] = useState('');
   const [turno] = useState('');
@@ -127,7 +131,7 @@ function Landing() {
             <div className="col-span-3 bg-gray-200 p-6 h-full rounded-lg shadow-lg"> {/* Graph Placeholder */}
               <h2 className="text-xl font-bold mb-4">Graph</h2>
               {/* You can replace this with your actual graph component */}
-              <div className="h-80 bg-gray-300 flex items-center justify-center">La Grafica va aqui</div>
+              <div className="h-80 bg-gray-300 flex items-center justify-center"> <PythonRunner /></div>
             </div>
             <div className="col-span-1 bg-gray-200 p-6 h-full rounded-lg shadow-lg"> {/* List Placeholder */}
               <h2 className="text-xl font-bold mb-4">Lista por Dias</h2>
