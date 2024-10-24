@@ -30,8 +30,8 @@
   color: rgba(255, 255, 255, 0.87);
 
   background-color: #fdfdff;
-   ;
-  background-image: url("src/assets/LogoBW.png");
+   
+
   background-repeat: no-repeat;  /* Prevent the image from repeating */
   background-position: center;    /* Center the image */
   background-size: cover;         /* Cover the entire viewport */
@@ -63,6 +63,7 @@ body {
   width: 100vw;
   height: 100vh;
   padding: 0; /* Ensure no padding is causing issues */
+  align-items: flex-start;
 }
 h1 {
   font-size: 3.2em;
@@ -102,7 +103,7 @@ button:focus-visible {
 /* Navigation Bar */
 nav {
   text-align: left;
-  padding: 1em;
+  padding-left: 1em;
   background-color: #eee;
   position: fixed;
   top: 0;
@@ -122,80 +123,7 @@ nav ul li a {
 nav ul li a:hover {
   color: #535bf2; /* Respects the hover of the links in your root */
 }
-/* Main Container Alignment */
-.container {
-  width: 100%; /* Ensure it uses the full width */
-  max-width: 1200px; /* Limit the maximum width */
-  margin: 0 auto; /* Center the container */
-  padding: 1em; /* Adjust padding as needed */
-}
-/* Form Section Alignment */
-.form-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-}
-.form-section label {
-  flex: 1;
-}
-.form-section select {
-  width: 100%;
-}
-/* Buttons */
-.form-section button,
-.import-section button,
-.summary button {
-  padding: 0.6em 1.2em;
-  background-color: #1a1a1a;
-  color: rgba(255, 255, 255, 0.87);
-  border-radius: 8px;
-  border: 1px solid transparent;
-  font-weight: 500;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-.form-section button:hover,
-.import-section button:hover,
-.summary button:hover {
-  border-color: #646cff;
-}
-/* Section Margins */
-.import-section {
-  margin-top: 0px;
-  text-align: left;
-}
-.results {
-  margin-top: 0px;
-  text-align: left;
-}
-.results h2 {
-  font-size: 1.5em;
-  line-height: 1.1;
-  margin: 0; /* Reset margin */
-}
-/* Summary Section */
-.summary {
-  margin-top: 0px;
-  text-align: left;
-}
-/* Light Mode Compatibility */
-@media (prefers-color-scheme: light) {
-  nav {
-    background-color: #ffffff;
-  }
-  nav ul li a {
-    color: #213547; /* Color of the links in light mode */
-  }
-  .form-section button,
-  .import-section button,
-  .summary button {
-    background-color: #f9f9f9;
-    color: #213547;
-  }
-}
+
 .bgaudi {
   /* Add any specific styles for .bgaudi if needed */
 }
@@ -252,4 +180,18 @@ nav ul li a:hover {
 /* Apply animation to the entire form and other content */
 .animate-ease-in {
   animation: easeIn 1s ease-in-out forwards; /* 1s duration, ease-in-out */
+}
+
+
+
+.bodylogin{
+  margin: 0; /* Remove margin */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  justify-content: center; /* Center elements vertically */
+  width: 100vw;
+  height: 100vh;
+  padding: 0; /* Ensure no padding is causing issues */
+  align-items:center;
 }

@@ -19,7 +19,7 @@ function Login({ onSuccessfulLogin }) {
 
   return (
     <>
-      <div className='overflow-y-hidden'>
+      <div className='overflow-y-hidden bodylogin'>
         {/* Video background with black filter */}
         <div className="video-container overflow-y-hidden">
           <iframe
@@ -33,7 +33,7 @@ function Login({ onSuccessfulLogin }) {
         </div>
 
         {/* Login form content */}
-        <div className="flex flex-col items-center justify-center h-screen mt-96 relative overflow-y-hidden">
+        <div className="flex flex-col items-center justify-center h-screen mt-60 relative overflow-y-hidden">
           <h2 className='PAPA text-center mb-4 text-6xl tracking-wide text-Progressive-Red'>Inicia Sesion</h2>
             <div className="flex flex-col  h-screen mt-5  overflow-y-hidden" >
             <input
@@ -76,9 +76,9 @@ Login.propTypes = {
 function Pki({ handleShowLogin }) {
   return (
     <>
-      <div>
+      <div className='bodylogin'>
         {/* Video background with zoom and black filter */}
-        <div className="video-container overflow-y-hidden">
+        <div className="video-container overflow-y-hidden ">
           <iframe
             className="background-video overflow-y-hidden"
             src="https://www.youtube.com/embed/Qi-WbN3aUyM?autoplay=1&mute=1&controls=0&start=10&showinfo=0&modestbranding=1&rel=0"
@@ -90,14 +90,14 @@ function Pki({ handleShowLogin }) {
         </div>
 
         {/* Overlay content */}
-        <div className="flex flex-col items-center justify-center h-screen mt-72 relative overflow-y-hidden">
+        <div className="flex flex-col items-center justify-center h-screen mt-44 relative overflow-y-hidden">
           <div className="flex flex-col items-center justify-items-stretch h-screen">
             <h1 className="PAPA text-center mb-4 text-6xl tracking-wide text-Progressive-Red">
               Predictor Ausentismo <br /> Audi
             </h1>
-            <div className="block mt-5 text-xl max-w-sm p-10 rounded-lg shadow hover:bg-gray-100 bg-Progressive-Red/90 dark:hover:bg-Progressive-Red">
+            <div className="block mt-5 text-xl max-w-sm p-10 rounded-lg opacity-70 shadow  bg-Progressive-Red/60 hover:bg-Progressive-Red">
               <h2 className="text-center btn">Valida tus credenciales <br />para acceder al sistema</h2>
-              <button className="block mx-auto mt-4 p-2 bg-Progressive-Red-500 text-white rounded" onClick={handleShowLogin}>
+              <button className="block mx-auto mt-4 p-2 bg-black text-white rounded" onClick={handleShowLogin}>
                 Validar PKI
               </button>
             </div>
