@@ -1,0 +1,98 @@
+.landing {
+  margin: 0; /* Remove margin */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align items to the start */
+  justify-content: flex-start; /* Align items to the start */
+  width: 100vw;
+  height: 100vh;
+  padding: 0; /* Ensure no padding is causing issues */
+}
+
+/* Main Container Alignment */
+.containercs {
+  width: 95%; /* Ensure it uses the full width */
+  margin: 0; /* Center the container */
+  padding-top: 1em; /* Adjust padding as needed */
+}
+
+/* Form Section Alignment */
+.form-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end; /* Align items to the bottom */
+  width: 70%;
+}
+
+.form-section label {
+  flex: 1;
+}
+
+.form-section select {
+  width: 100%;
+}
+
+/* Buttons */
+.form-section button,
+.import-section button,
+.summary button {
+  padding: 0.6em 1.2em;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.form-section button:hover,
+.import-section button:hover,
+.summary button:hover {
+  border-color: #646cff;
+}
+
+/* Section Margins */
+.import-section,
+.results,
+.summary {
+  margin-top: 0;
+  text-align: left;
+}
+
+.results h2 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  margin: 0; /* Reset margin */
+}
+
+/* Light Mode Compatibility */
+@media (prefers-color-scheme: light) {
+  nav {
+    background-color: #ffffff;
+  }
+
+  nav ul li a {
+    color: #213547; /* Color of the links in light mode */
+  }
+
+  .form-section button,
+  .import-section button,
+  .summary button {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-section {
+    flex-direction: column; /* Stack on smaller screens */
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Stack graph and list */
+  }
+}
