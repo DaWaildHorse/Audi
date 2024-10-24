@@ -236,3 +236,20 @@ nav ul li a:hover {
 .relative {
   z-index: 1; /* Keep the content above the video */
 }
+
+/* Ease-in animation */
+@keyframes easeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below the viewport */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+
+/* Apply animation to the entire form and other content */
+.animate-ease-in {
+  animation: easeIn 1s ease-in-out forwards; /* 1s duration, ease-in-out */
+}

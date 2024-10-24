@@ -33,9 +33,10 @@ function Login({ onSuccessfulLogin }) {
         </div>
 
         {/* Login form content */}
-        <div className="flex flex-col items-center justify-center h-screen mt-28 relative overflow-y-hidden">
+        <div className="flex flex-col items-center justify-center h-screen mt-96 relative overflow-y-hidden">
           <h2 className='PAPA text-center mb-4 text-6xl tracking-wide text-Progressive-Red'>Inicia Sesion</h2>
-          <input
+            <div className="flex flex-col  h-screen mt-5  overflow-y-hidden" >
+            <input
             type="text"
             placeholder="Usuario"
             value={username}
@@ -57,7 +58,8 @@ function Login({ onSuccessfulLogin }) {
           </button>
           {message && <p className='mt-4 text-red-600'>{message}</p>}
         </div>
-      </div>
+        </div>
+        </div>
     </>
   );
 }
