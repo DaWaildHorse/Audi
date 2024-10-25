@@ -12,7 +12,7 @@ function Login({ onSuccessfulLogin }) {
 
 
   const handleLogin = () => {
-    if (username === 'admin' && password === 'admin') {
+    if (username === 'audi' && password === 'audi') {
       setMessage('Login successful!');
       onSuccessfulLogin(); // Call the function to navigate to Landing
     } else {
@@ -36,30 +36,32 @@ function Login({ onSuccessfulLogin }) {
         </div>
 
         {/* Login form content */}
-        <div className="flex flex-col items-center justify-center h-screen mt-60 relative overflow-y-hidden">
-          <h2 className='PAPA text-center mb-4 text-6xl tracking-wide text-Progressive-Red'>Inicia Sesion</h2>
-            <div className="flex flex-col  h-screen mt-5  overflow-y-hidden" >
+        <div className="flex flex-col items-center justify-center h-screen mt-8 relative overflow-y-hidden">
+        <div className="block mt-5 text-xl max-w-sm p-10 rounded-lg opacity-70 shadow  bg-Progressive-Red/60 hover:bg-Progressive-Red">
+          <h2 className='PAPA text-center mb-4 text-6xl tracking-wide text-white'>Inicia Sesión</h2>
+            <div className="flex flex-col  mt-5  overflow-y-hidden" >
             <input
             type="text"
             placeholder="Usuario"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="mb-4 p-2 border border-gray-300 rounded"
+            className="mb-4 p-2 border bg-black border-gray-300 rounded"
           />
           <input
             type="password"
             placeholder="PIN"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="mb-4 p-2 border border-gray-300 rounded"
+            className="mb-4 p-2 border bg-black border-gray-300 rounded"
           />
           <button
             onClick={handleLogin}
-            className="p-2 bg-Progressive-Red-500 text-white rounded"
+            className="p-2 bg-Progressive-Red-500 bg-black text-white rounded"
           >
             Aceptar
           </button>
-          {message && <p className='mt-4 text-red-600'>{message}</p>}
+          {message && <p className='mt-4 text-white'>{message}</p>}
+        </div>
         </div>
         </div>
         </div>
@@ -95,11 +97,11 @@ function Pki({ handleShowLogin }) {
         {/* Overlay content */}
         <div className="flex flex-col items-center justify-center h-screen mt-44 relative overflow-y-hidden">
           <div className="flex flex-col items-center justify-items-stretch h-screen">
-            <h1 className="PAPA text-center mb-4 text-6xl tracking-wide text-Progressive-Red">
-              Predictor Ausentismo <br /> Audi
+            <h1 className="PAPA nunito-sans-title  text-center mb-4  text-7xl tracking-wide text-Progressive-Red leading-normal">
+              Predictor de ausencia <br /> de personal AUDI (PAPA)
             </h1>
             <div className="block mt-5 text-xl max-w-sm p-10 rounded-lg opacity-70 shadow  bg-Progressive-Red/60 hover:bg-Progressive-Red">
-              <h2 className="text-center btn">Valida tus credenciales <br />para acceder al sistema</h2>
+              <h2 className="text-center text-2xl btn">Valida tus credenciales <br />para acceder al sistema</h2>
               <button className="block mx-auto mt-4 p-2 bg-black text-white rounded" onClick={handleShowLogin}>
                 Validar PKI
               </button>
