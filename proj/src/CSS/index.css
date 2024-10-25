@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "AudiTitle";
-  src: url("src/assets/Audi Type Digital/AudiType v4.03 Web Fonts (TrueType)/AudiType-Bold_4.03.woff") format('woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
 
 @font-face {
   font-family: "Audifont";
@@ -14,7 +11,7 @@
 
 
 .PAPA{
-  font-family: 'AudiTtile';
+  font-family: "MuseoModerno", sans-serif;
   font-weight: 800;
 }
 
