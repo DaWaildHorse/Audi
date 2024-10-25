@@ -27,9 +27,9 @@ const generateDates = (startDate, days) => {
 const DataGraphWeek1 = ({ data }) => {
   return (
     <LineChart width={1100} height={350} data={data}>
-      <Line type="monotone" dataKey="upper" stroke="#f50537" name="Cota superior" strokeWidth={7} />
+      <Line type="monotone" dataKey="upper" stroke="#f50537" name="Límite superior" strokeWidth={7} />
       <Line type="monotone" dataKey="value" stroke="#000000" name="Predicción" strokeWidth={7} />
-      <Line type="monotone" dataKey="lower" stroke="#f50537" name="Cota inferior" strokeWidth={7} />
+      <Line type="monotone" dataKey="lower" stroke="#f50537" name="Límite inferior" strokeWidth={7} />
       <CartesianGrid stroke="#ccc" />
       <XAxis dataKey="name" />
       <YAxis />
@@ -55,9 +55,9 @@ DataGraphWeek1.propTypes = {
 const DataGraphWeek2 = ({ data }) => {
   return (
     <LineChart width={1100} height={350} data={data}>
-      <Line type="monotone" dataKey="upper" stroke="#f50537" name="Cota superior" strokeWidth={7} />
+      <Line type="monotone" dataKey="upper" stroke="#f50537" name="Límite superior" strokeWidth={7} />
       <Line type="monotone" dataKey="value" stroke="#000000" name="Predicción" strokeWidth={7} />
-      <Line type="monotone" dataKey="lower" stroke="#f50537" name="Cota inferior" strokeWidth={7} />
+      <Line type="monotone" dataKey="lower" stroke="#f50537" name="Límite inferior" strokeWidth={7} />
       <CartesianGrid stroke="#ccc" />
       <XAxis dataKey="name" />
       <YAxis />
@@ -89,7 +89,7 @@ const SpecificSearch = () => {
   const [department, setDepartment] = useState(''); // Estado para el departamento seleccionado
   const departments = ['M/G-5M24' , 'M/G-5M23', 'M/G-5M41' ,'M/G-5M7' ]
   
-  const turn= ['RG3_3T', 'RG1_3T' , 'RG2_3T' ,' T_CENT' , 'RG1_2T' , 'RG2_2T', 'R6D__01'] 
+  const turn= ['RG3_3T', 'RG1_3T' , 'RG2_3T' ,' T_CENT' , 'RG1_2T' , 'RG2_2T'] 
   const [Turns, setTurn] = useState(''); // Estado para el departamento seleccionado
   
   // Función para obtener predicciones al hacer clic en el botón
@@ -214,9 +214,9 @@ const SpecificSearch = () => {
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" className="px-6 py-3 text-white bg-Progressive-Red">Día</th>
-                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">AI</th>
-                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">AJ</th>
-                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">Pool</th>
+                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">P</th>
+                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">NP</th>
+                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">Pull</th>
                 </tr>
               </thead>
               <tbody >
@@ -254,9 +254,9 @@ const SpecificSearch = () => {
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">Día</th>
-                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">AI</th>
-                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">AJ</th>
-                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red" >Pool</th>
+                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">P</th>
+                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red">NP</th>
+                  <th scope="col" className="px-6 py-3  text-white bg-Progressive-Red" >Pull</th>
                 </tr>
               </thead>
               <tbody>
