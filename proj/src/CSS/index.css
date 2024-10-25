@@ -7,14 +7,27 @@
   src: url("src/assets/Audi Type Digital/AudiType v4.03 Web Fonts (TrueType)/AudiType-Bold_4.03.woff") format('woff');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 @font-face {
   font-family: "Audifont";
   src: url("src/assets/Audi Type Digital/AudiType v4.03 Web Fonts (TrueType)/AudiType-WideNormal_4.03.woff") format('woff');
 }
 
+.nunito-sans-title {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+
 
 .PAPA{
-  font-family: 'AudiTtile';
+
   font-weight: 800;
 }
 
